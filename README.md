@@ -23,7 +23,7 @@ Each part of the project is structured as a separate module. Below are the indiv
    - Hosted Link: [website](https://90north-task.vercel.app/) 
 **Note**: The responsiveness may appear slightly off due to specific values for screen width mentioned in the problem statement.
 
-   For further details, please refer to the [Frontend README](frontend/README.md).
+   For further details, please refer to the [Frontend README](north90frontend/README.md).
 
 2. **Django Chat Application**
 
@@ -33,14 +33,14 @@ Each part of the project is structured as a separate module. Below are the indiv
 
     ![Chat Application](north90backend/media/chat.png)
 
-   For further details, please refer to the [Django Chat Application README](django-chat/README.md).
+   For further details, please refer to the [Django Chat Application README](north90backend/README.md).
 
 3. **AWS Lambda Functions**
 
    - Lambda Function to Add Two Numbers
    - Lambda Function to Store Files in an S3 Bucket
 
-   For further details, please refer to the [AWS Lambda Functions README](aws-lambda/README.md).
+   For further details, please refer to the [AWS Lambda Functions README](AWS/README.md).
 
     ![AWS Lambda Application](AWS/media/task2_outpu.png)
 
