@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Responsive Webpage with Next.js
 
-## Getting Started
+This project is a responsive webpage built using Next.js, implementing the following features:
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Layout
+1. **Fixed Navbar**: A navigation bar that remains fixed at the top of the viewport during scrolling.
+2. **Three Sections Below the Navbar**:
+   - **Left Menu**: A collapsible menu on the left side of the page.
+   - **Main Content Area**: A central area for displaying content.
+   - **Right-side Panel**: A panel on the right for additional information or widgets.
+3. **Footer**: A footer section at the bottom of the webpage.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Responsiveness
+A JavaScript hook was created to dynamically adjusts the page width based on the screen size:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Screen Width Between 992px and 1600px**: The page shrinks to 90% of its width.
+- **Screen Width Between 700px and 767px**: The page shrinks to 80% of its width.
+- **Screen Width Between 600px and 700px**: The page shrinks to 75% of its width.
+- **Screen Width Less Than or Equal to 600px**: The page shrinks to 50% of its width.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Challenges with Responsiveness
+The specified shrinkage percentages can create issues with responsiveness:
 
-## Learn More
+1. **Overlapping Elements**: The shrinking might cause elements to overlap, especially if the content or components have fixed widths or margins.
+2. **Text Overflow**: Text in sections like the navbar, main content, or panels may overflow or get cut off.
+3. **Unpredictable Behavior on Mid-range Screens**: The large gaps between defined ranges (e.g., 767px to 700px) may lead to unpredictable rendering for screens just outside these thresholds.
+4. **Overall Layout Distortion**: Shrinking percentages do not account for padding, margins, or container-specific styles, which can distort the layout.
 
-To learn more about Next.js, take a look at the following resources:
+## How to Run the Project
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the Repository**:
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. **Start the Development Server**:
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Open your browser and navigate to `http://localhost:3000`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Example Media 
+![alt text](media/image.png)
