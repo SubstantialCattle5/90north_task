@@ -258,7 +258,7 @@
         }
 
         chatSocket = new WebSocket(
-          `ws://${window.location.host}/ws/chat/${sender}${receiver}/`
+          `wss://${window.location.host}/ws/chat/${sender}${receiver}/`
         );
 
         chatSocket.onmessage = function (e) {
