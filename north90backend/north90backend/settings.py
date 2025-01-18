@@ -134,3 +134,9 @@ LOGOUT_REDIRECT_URL = "/login/"
 
 
 ASGI_APPLICATION = 'north90backend.asgi.application'
+
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://nine0north-task-3c97.onrender.com',
+]
+CSRF_COOKIE_SECURE = True  # Set to True when deploying to production
