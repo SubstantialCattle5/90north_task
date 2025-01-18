@@ -139,4 +139,9 @@ ASGI_APPLICATION = 'north90backend.asgi.application'
 CSRF_TRUSTED_ORIGINS = [
     'https://nine0north-task-3c97.onrender.com',
 ]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://nine0north-task-3c97.onrender.com",  # Frontend domain on Render
+    "http://localhost:3000",  # Localhost if testing locally
+]
 CSRF_COOKIE_SECURE = True  # Set to True when deploying to production
